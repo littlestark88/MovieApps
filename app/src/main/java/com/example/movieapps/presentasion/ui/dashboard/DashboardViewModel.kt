@@ -1,4 +1,4 @@
-package com.example.movieapps.ui.dashboard
+package com.example.movieapps.presentasion.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

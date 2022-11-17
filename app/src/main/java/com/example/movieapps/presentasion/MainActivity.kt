@@ -1,4 +1,4 @@
-package com.example.movieapps
+package com.example.movieapps.presentasion
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.movieapps.R
 import com.example.movieapps.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
