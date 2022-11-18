@@ -37,5 +37,5 @@ data class MovieNowPlayingEntity(
     val voteAverage: Double? = 0.0,
 
     @field:SerializedName("isFavorite")
-    val isFavorite: Boolean? = false
+    var isFavorite: Boolean? = false
 )

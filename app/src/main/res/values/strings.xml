@@ -3,4 +3,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="label_image_poster">Image Poster</string>
+    <string name="label_description">Description</string>
+    <string name="label_date">19 November 2022</string>
+    <string name="label_rating">8.0</string>
+    <string name="label_movie">Movie</string>
+    <string name="label_favorite_movie">Favorite Movie</string>
+    <string name="label_back_image">Back Image</string>
+    <string name="label_title">Title</string>
+    <string name="label_image_rate">Image Rate</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_retry">Retry</string>
 </resources>

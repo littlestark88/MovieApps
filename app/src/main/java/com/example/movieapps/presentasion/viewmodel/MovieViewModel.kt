@@ -8,6 +8,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.example.movieapps.domain.IMovieUseCase
 import com.example.movieapps.domain.model.MovieList
+import kotlinx.coroutines.flow.Flow
 
 class MovieViewModel(
     private val movieUseCase: IMovieUseCase
@@ -18,4 +19,10 @@ class MovieViewModel(
 
     fun getMovieSimilar(movieId: Int): LiveData<PagingData<MovieList>> =
         movieUseCase.getMovieSimilar(movieId).cachedIn(viewModelScope).asLiveData()
+
+    suspend fun setMovieNowPlayingFavorite(movie: MovieList, newStatus: Boolean) =
+        movieUseCase.setMovieNowPlayingFavorite(movie, newStatus)
+
+    fun getMovieNowPlayingFavorite() =
+        movieUseCase.getMovieNowPlayingFavorite().asLiveData()
 }

@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/drawable/bg_radius_grey.xml" value="0.148" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/drawable/bg_rounded_white.xml" value="0.148" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/drawable/ic_rate.xml" value="0.148" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/drawable/item_clicked_color.xml" value="0.148" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/activity_detail_movie.xml" value="0.125" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/activity_main.xml" value="0.2504528985507246" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/fragment_movie.xml" value="0.1" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/item_loading_layout.xml" value="0.1773049645390071" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/movie_item_list.xml" value="0.2504528985507246" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/layout/movie_list_item.xml" value="0.1" />
+        <entry key="..\:/Users/LittleStark/Documents/MovieApps/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/LittleStark/Documents/ProjectLatihan/MovieApps/app/src/main/res/layout/activity_main.xml" value="0.2463768115942029" />
       </map>
     </option>

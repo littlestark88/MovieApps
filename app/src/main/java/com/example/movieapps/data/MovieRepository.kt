@@ -5,6 +5,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.movieapps.data.local.MovieDatabase
+import com.example.movieapps.data.local.MovieLocalDataSource
 import com.example.movieapps.data.remote.MovieRemoteDataSource
 import com.example.movieapps.data.remote.remotemediator.MovieNowPlayingRemoteMediator
 import com.example.movieapps.data.remote.remotemediator.MovieSimilarRemoteMediator
@@ -17,6 +18,7 @@ import kotlinx.coroutines.flow.map
 
 class MovieRepository(
     private val movieRemoteDataSource: MovieRemoteDataSource,
+    private val movieLocalDataSource: MovieLocalDataSource,
     private val movieDatabase: MovieDatabase
 ): IMovieRepository {
     @OptIn(ExperimentalPagingApi::class)
@@ -43,5 +45,16 @@ class MovieRepository(
         ).flow.map {
             MovieSimilarMapper.mapGetMovieSimilarPaging(it)
         }
+    }
+
+    override fun getMovieNowPlayingFavorite(): Flow<List<MovieList>> {
+        return movieLocalDataSource.getFavoriteMovieNowPlaying().map {
+            MovieNowPlayingMapper.mapMovieNowPlayingEntityToDomain(it)
+        }
+    }
+
+    override suspend fun setMovieNowPlayingFavorite(movie: MovieList, state: Boolean) {
+        val movieNowPlayingEntity = MovieNowPlayingMapper.mapMovieNowPlayingDomainToEntity(movie)
+        movieLocalDataSource.setFavoriteMovie(movieNowPlayingEntity, state)
     }
 }

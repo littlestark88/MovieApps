@@ -7,6 +7,7 @@ import com.chuckerteam.chucker.api.RetentionManager
 import com.example.movieapps.BuildConfig.BASE_URL
 import com.example.movieapps.data.MovieRepository
 import com.example.movieapps.data.local.MovieDatabase
+import com.example.movieapps.data.remote.MovieRemoteDataSource
 import com.example.movieapps.data.remote.network.ApiService
 import com.example.movieapps.data.remote.remotemediator.MovieNowPlayingRemoteMediator
 import com.example.movieapps.data.remote.remotemediator.MovieSimilarRemoteMediator
@@ -65,6 +66,7 @@ val databaseModule = module {
 }
 
 val repositoryModule = module {
+    single { MovieRemoteDataSource(get()) }
     factory<IMovieRepository> { MovieRepository(get(),get()) }
 }
 

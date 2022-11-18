@@ -1,11 +1,9 @@
 package com.example.movieapps.data.local.dao
 
 import androidx.paging.PagingSource
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.movieapps.data.local.entity.MovieNowPlayingEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MovieNowPlayingDao {
@@ -17,4 +15,10 @@ interface MovieNowPlayingDao {
 
     @Query("DELETE FROM MovieNowPlayingTable")
     suspend fun deleteMovieNowPlaying()
+
+    @Update
+    suspend fun updateMovieNowPlaying(movieNowPlayingEntity: MovieNowPlayingEntity)
+
+    @Query("SELECT * FROM MovieNowPlayingTable where isFavorite = 1")
+    fun getFavoriteMovieNowPlaying(): Flow<List<MovieNowPlayingEntity>>
 }

@@ -39,4 +39,34 @@ object MovieNowPlayingMapper {
                 isFavorite = false
             )
         }
+
+    fun mapMovieNowPlayingEntityToDomain(data: List<MovieNowPlayingEntity>): List<MovieList> =
+        data.map {
+            MovieList(
+                overview = it.overview.orEmpty(),
+                originalLanguage = it.originalLanguage.orEmpty(),
+                title = it.title.orEmpty(),
+                posterPath = it.posterPath.orEmpty(),
+                backdropPath = it.backdropPath.orEmpty(),
+                releaseDate = it.releaseDate.orEmpty(),
+                popularity = it.popularity ?: 0.0,
+                voteAverage = it.voteAverage ?: 0.0,
+                id = it.id.toInt(),
+                isFavorite = it.isFavorite ?: false
+            )
+        }
+
+    fun mapMovieNowPlayingDomainToEntity(data: MovieList) = MovieNowPlayingEntity(
+        id = data.id.toString(),
+        overview = data.overview,
+        originalLanguage = data.originalLanguage,
+        title = data.title,
+        posterPath = data.posterPath,
+        backdropPath = data.backdropPath,
+        releaseDate = data.releaseDate,
+        popularity = data.popularity,
+        voteAverage = data.voteAverage,
+        isFavorite = data.isFavorite
+
+    )
 }
