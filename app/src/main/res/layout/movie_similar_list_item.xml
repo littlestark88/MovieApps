@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dimens_8dp"
+    android:background="@drawable/bg_radius_grey">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPoster"
+        android:layout_width="@dimen/dimens_70dp"
+        android:layout_height="@dimen/dimens_100dp"
+        app:cardCornerRadius="@dimen/dimens_8dp"
+        android:layout_marginStart="@dimen/dimens_8dp"
+        android:layout_marginBottom="@dimen/dimens_8dp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:layout_marginEnd="@dimen/dimens_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgPoster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/label_image_poster"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/dimens_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_12dp"
+        android:layout_marginBottom="@dimen/dimens_8dp"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/colorBlackGrey"
+        android:textStyle="bold"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cvPoster"
+        app:layout_constraintTop_toBottomOf="@+id/cvPoster"
+        app:layout_constraintStart_toStartOf="@+id/cvPoster"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,7 +66,7 @@ object MovieNowPlayingMapper {
         releaseDate = data.releaseDate,
         popularity = data.popularity,
         voteAverage = data.voteAverage,
-        isFavorite = data.isFavorite
+        isFavorite = true
 
     )
 }

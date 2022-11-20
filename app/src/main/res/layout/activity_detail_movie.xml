@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/label_back_image"
-                android:src="@drawable/ic_favorite_movie"
+                android:src="@drawable/ic_unfavorite"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -167,4 +167,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOverview"/>
+
+    <TextView
+        android:id="@+id/tvSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_24dp"
+        android:layout_marginTop="@dimen/dimens_24dp"
+        android:text="@string/label_similar"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOverviewDesc"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMovieSimilar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSimilar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

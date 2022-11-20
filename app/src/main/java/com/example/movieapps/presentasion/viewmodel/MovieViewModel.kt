@@ -20,8 +20,8 @@ class MovieViewModel(
     fun getMovieSimilar(movieId: Int): LiveData<PagingData<MovieList>> =
         movieUseCase.getMovieSimilar(movieId).cachedIn(viewModelScope).asLiveData()
 
-    suspend fun setMovieNowPlayingFavorite(movie: MovieList, newStatus: Boolean) =
-        movieUseCase.setMovieNowPlayingFavorite(movie, newStatus)
+    suspend fun updateMovieNowPlayingFavorite(movie: MovieList, state: Boolean) =
+        movieUseCase.updateMovieNowPlayingFavorite(movie, state)
 
     fun getMovieNowPlayingFavorite() =
         movieUseCase.getMovieNowPlayingFavorite().asLiveData()

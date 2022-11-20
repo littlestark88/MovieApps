@@ -14,4 +14,5 @@
     <string name="label_image_rate">Image Rate</string>
     <string name="label_overview">Overview</string>
     <string name="label_retry">Retry</string>
+    <string name="label_similar">Similar</string>
 </resources>

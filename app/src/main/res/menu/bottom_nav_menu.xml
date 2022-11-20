@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/navigation_favorite_movie"
-        android:icon="@drawable/ic_favorite_movie"
+        android:icon="@drawable/ic_unfavorite"
         android:title="@string/label_favorite_movie" />
 
 </menu>
