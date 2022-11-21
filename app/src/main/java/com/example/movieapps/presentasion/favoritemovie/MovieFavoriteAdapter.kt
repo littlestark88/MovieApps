@@ -1,6 +1,5 @@
 package com.example.movieapps.presentasion.favoritemovie
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -44,6 +43,9 @@ class MovieFavoriteAdapter(
                     .load(POSTER_URL + data.posterPath)
                     .placeholder(R.drawable.ic_refresh)
                     .into(imgPoster)
+                itemView.setOnClickListener {
+                    onClickListener(data)
+                }
             }
         }
 
